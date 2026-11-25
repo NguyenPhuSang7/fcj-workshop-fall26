@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-This is where I kept track of what I did each week during the First Cloud AI Journey internship. The program ran for 12 weeks, from 14/09/2026 to 14/12/2026. The first eight weeks were mostly self-study along the AWS Free Tier roadmap, with a lab at the end of each topic. From week 8 on, most of my time went to the team project, RoomLedger, plus a few blog posts.
+This is where I kept track of what I did each week during the First Cloud AI Journey internship. The program ran for 12 weeks, from 14/09/2026 to 14/12/2026. The first eight weeks were mostly self-study along the AWS Free Tier roadmap, with a lab at the end of each topic. From week 8 on, most of my time went to the team project, RoomLedger, plus three blog posts for the AWS Study Group.
 
 **Week 1:** [Went through the office rules, set up AWS and Portal accounts, MFA, a budget and an IAM admin user](1.1-week1/)
 
@@ -24,9 +24,9 @@ This is where I kept track of what I did each week during the First Cloud AI Jou
 
 **Week 8:** [CloudWatch, CloudTrail and X-Ray, and the week the team locked in the project idea](1.8-week8/)
 
-**Week 9:** [RoomLedger move-out and move-in meter features, plus blog 1](1.9-week9/)
+**Week 9:** [RoomLedger move-out and move-in meter features](1.9-week9/)
 
-**Week 10:** [Move-out settlement, the monitoring stack for RoomLedger, and blogs 2 and 3](1.10-week10/)
+**Week 10:** [Move-out settlement, the monitoring stack for RoomLedger, and my three blog posts](1.10-week10/)
 
 **Week 11:** [Narrowed the product scope and built the RoomLedger web screens](1.11-week11/)
 

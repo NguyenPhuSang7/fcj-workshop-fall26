@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Đây là nơi mình ghi lại những gì đã làm mỗi tuần trong kỳ thực tập First Cloud AI Journey. Chương trình kéo dài 12 tuần, từ 14/09/2026 đến 14/12/2026. Tám tuần đầu chủ yếu là tự học theo roadmap AWS Free Tier, cuối mỗi chủ đề có một bài lab. Từ tuần 8 trở đi, phần lớn thời gian mình dành cho dự án nhóm RoomLedger và viết một vài bài blog.
+Đây là nơi mình ghi lại những gì đã làm mỗi tuần trong kỳ thực tập First Cloud AI Journey. Chương trình kéo dài 12 tuần, từ 14/09/2026 đến 14/12/2026. Tám tuần đầu chủ yếu là tự học theo roadmap AWS Free Tier, cuối mỗi chủ đề có một bài lab. Từ tuần 8 trở đi, phần lớn thời gian mình dành cho dự án nhóm RoomLedger và viết ba bài blog cho AWS Study Group.
 
 **Tuần 1:** [Đọc nội quy, tạo tài khoản AWS và Portal, bật MFA, đặt budget và tạo IAM admin user](1.1-week1/)
 
@@ -24,9 +24,9 @@ pre: " <b> 1. </b> "
 
 **Tuần 8:** [CloudWatch, CloudTrail, X-Ray và tuần cả nhóm chốt ý tưởng dự án](1.8-week8/)
 
-**Tuần 9:** [Làm tính năng trả phòng và chỉ số đồng hồ lúc nhận phòng cho RoomLedger, viết blog 1](1.9-week9/)
+**Tuần 9:** [Làm tính năng trả phòng và chỉ số đồng hồ lúc nhận phòng cho RoomLedger](1.9-week9/)
 
-**Tuần 10:** [Quyết toán trả phòng, stack giám sát cho RoomLedger, blog 2 và blog 3](1.10-week10/)
+**Tuần 10:** [Quyết toán trả phòng, stack giám sát cho RoomLedger và ba bài blog](1.10-week10/)
 
 **Tuần 11:** [Thu gọn phạm vi sản phẩm và dựng giao diện web RoomLedger](1.11-week11/)
 
