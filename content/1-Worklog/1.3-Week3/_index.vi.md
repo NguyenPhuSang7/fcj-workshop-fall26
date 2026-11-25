@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu cách mạng hoạt động trên AWS: VPC, Security Group, NACL, Internet Gateway và NAT Gateway.
+* Tự tay dựng một mạng nhiều tầng (multi-tier).
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | - Khái niệm và cách thiết lập VPC <br>&emsp; + Dải CIDR, subnet public và private, route table | 28/09/2026 | 28/09/2026 | <https://000003.awsfcaj.com/> |
+| 3 | - Tham dự watch party AWS Cloud Day And AI Day Hanoi | 29/09/2026 | 29/09/2026 | |
+| 4 | - So sánh Security Group với NACL <br> - Tìm hiểu Internet Gateway và NAT Gateway dùng để làm gì | 30/09/2026 | 30/09/2026 | <https://000003.awsfcaj.com/> <br> <https://000092.awsfcaj.com/> |
+| 5 | - Lab: mạng nhiều tầng <br>&emsp; + Tạo VPC gồm một subnet public và một subnet private <br>&emsp; + Gắn Internet Gateway và thêm route cho subnet public <br>&emsp; + Thêm NAT Gateway để subnet private ra được Internet <br>&emsp; + Tạo Security Group riêng cho tầng web và tầng ứng dụng, rồi thử kết nối giữa hai tầng <br>&emsp; + Dọn hết tài nguyên sau khi làm xong | 01/10/2026 | 01/10/2026 | <https://000092.awsfcaj.com/> |
+| 6 | - Tham dự Fireside Chat with Dr. Werner Vogels | 02/10/2026 | 02/10/2026 | |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Biết cách chia mạng trên AWS bằng VPC, subnet public/private và route table.
+* Phân biệt được Security Group (gắn với instance, stateful) và NACL (gắn với subnet, stateless).
+* Hiểu Internet Gateway và NAT Gateway mỗi cái làm nhiệm vụ gì.
+* Dựng được một mạng nhiều tầng chạy thật trong VPC.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Khó khăn & cách giải quyết:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Các sự kiện có rất nhiều case study của công ty lớn, nhưng thời gian ngắn nên mình chưa theo kịp hết.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Học tiếp IAM theo roadmap AWS Free Tier: user, group, role, policy và MFA.

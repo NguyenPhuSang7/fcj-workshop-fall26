@@ -1,57 +1,36 @@
 ---
 title: "Week 9 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Build the move-out flow and the move-in meter readings for our team project, RoomLedger.
+* Write blog 1 and pick topics for blogs 2 and 3.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2 | - Go back over CloudWatch <br> - Team work on the project | 09/11/2026 | 09/11/2026 | |
+| 3 | - Write blog 1 <br> - RoomLedger move-out (MD-06): <br>&emsp; + Open a move-out inspection and submit it for comparison <br>&emsp; + Perceptual hash to skip photo pairs that barely changed <br>&emsp; + Compare photos with Bedrock, falling back from Sonnet to Haiku <br>&emsp; + Landlord reviews the findings, tenant accepts or disputes them | 10/11/2026 | 10/11/2026 | <https://aws.amazon.com/blogs/architecture/modernization-pathways-for-a-legacy-net-framework-monolithic-application-on-aws/> <br> <https://www.facebook.com/groups/awsstudygroupfcj/posts/2333637697401189> |
+| 4 | - Brainstorm topics for blog 2 <br> - RoomLedger move-in (MD-04): opening electricity and water readings are required before the inspection can be confirmed <br> - Fix the cases the reviewer found on PR #15 | 11/11/2026 | 11/11/2026 | <https://builder.aws.com/> |
+| 5 | - Start blog 3 on cost optimization on AWS <br> - Team work: apply ideas from the blog sources to the project | 12/11/2026 | 12/11/2026 | <https://builder.aws.com/> <br> <https://cloudjourney.awsfcaj.com/> |
+| Sun | - Reject photos that arrive after an inspection is locked <br> - Move-out compare as a Step Functions state machine, with a DLQ and alarms <br> - Merge PRs #15 and #18 | 15/11/2026 | 15/11/2026 | |
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Blog 1 is written and posted in the FCJ group.
+* The move-out flow works end to end on the backend, from opening the inspection to the tenant's answer.
+* I used Bedrock for the first time, and the Step Functions lab from week 6 helped a lot when I built the compare state machine.
 
-* Successfully created and configured an AWS Free Tier account.
+### Difficulties & Solutions:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* The review on PR #15 found cases I hadn't thought about, such as a tenancy that is already settled or a meter reading that is already confirmed. I fixed them and added tests the same day.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### Plan for next week:
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Finish blog 2 and keep going with blog 3.
+* Build the move-out settlement for RoomLedger.

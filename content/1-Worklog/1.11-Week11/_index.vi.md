@@ -1,59 +1,35 @@
 ---
 title: "Worklog Tuần 11"
 date: 2024-01-01
-weight: 2
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Cùng team thống nhất phạm vi sản phẩm gọn hơn.
+* Làm giao diện web RoomLedger dùng được cả trên điện thoại lẫn máy tính.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | - Review và merge PR #36 (tăng bộ nhớ Lambda RenderPdf và EvidenceSeal lên 512 MB) <br> - Cùng team thu gọn phạm vi còn đồng hồ và hoá đơn: chỉ chủ nhà tải ảnh đồng hồ, người thuê được xem ảnh, bỏ phần trả phòng và quyết toán | 23/11/2026 | 23/11/2026 | |
+| 3 | - Chốt chỉ làm web, không làm app native; người thuê dùng được cả trên máy tính <br> - Dựng design system, layout responsive, màn hình duyệt chỉ số đồng hồ và hoá đơn cho người thuê <br> - Làm nốt các màn hình còn lại cho chủ nhà, người thuê và trang public trên dữ liệu mẫu | 24/11/2026 | 24/11/2026 | |
+| 4 | - Sửa các lỗi phát hiện khi test: điều hướng của chủ nhà trên điện thoại, toast hoàn tác, nút chụp lại ảnh, chặn duyệt chỉ số hai lần, phóng to ảnh và link khiếu nại cho người thuê, cùng một số chỗ về câu chữ và accessibility | 25/11/2026 | 25/11/2026 | |
+| 5 | - (Dự kiến) Mở pull request cho phần giao diện và xử lý review | 26/11/2026 | | |
+| 6 | - (Dự kiến) Tiếp tục chỉnh giao diện theo góp ý của team | 27/11/2026 | | |
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nhóm đã có phạm vi rõ ràng và gọn hơn: chỉ số đồng hồ và hoá đơn.
+* Toàn bộ màn hình RoomLedger cho chủ nhà, người thuê và trang public đã chạy trên dữ liệu mẫu, cả điện thoại lẫn máy tính.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Khó khăn & cách giải quyết:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Phạm vi mới không còn phần trả phòng và quyết toán mà mình làm ở tuần 9 và 10. Mình chuyển sang làm frontend, chỗ team đang cần thêm người.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nối giao diện với API thật.
+* Chuẩn bị cho buổi demo cuối kỳ.

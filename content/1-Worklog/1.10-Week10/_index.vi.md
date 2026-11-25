@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 10"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Đăng blog 2 và hoàn thiện blog 3 sau phản biện.
+* Làm xong phần quyết toán trả phòng cho RoomLedger và thêm giám sát cho dự án.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | - Hoàn thành blog 2 (bảo mật ứng dụng .NET legacy trên AWS) và đăng lên group FCJ <br> - Gom tài liệu cho blog 3 | 16/11/2026 | 16/11/2026 | <https://www.facebook.com/groups/awsstudygroupfcj/posts/2338886330209659> <br> <https://cloudjourney.awsfcaj.com/> |
+| 3 | - Tìm tài liệu và viết blog 3 (giảm chi phí cho ứng dụng .NET trên AWS) <br> - RoomLedger quyết toán: <br>&emsp; + Phải có chỉ số điện, nước cuối kỳ mới gửi được biên bản trả phòng <br>&emsp; + Tiền hoàn = tiền cọc trừ các khoản đã đồng ý trừ hoá đơn chưa trả <br>&emsp; + Một Lambda xuất biên bản quyết toán ra PDF <br>&emsp; + Chỉ người thuê được tải ảnh trả phòng lên <br> - Stack giám sát: SNS topic cho alarm, CloudWatch dashboard, alarm cho API 5xx, Lambda bị throttle và dung lượng trống của RDS, thời hạn lưu log cho các Lambda workflow | 17/11/2026 | 17/11/2026 | <https://aws.amazon.com/blogs/architecture/how-orderserv-achieved-up-to-64-cost-savings-with-multi-tenant-ecs/> <br> <https://docs.aws.amazon.com/cost-management/latest/userguide/cost-optimization-hub.html> <br> <https://000007.awsfcaj.com> <br> <https://000032.awsfcaj.com> <br> <https://000034.awsfcaj.com> <br> <https://000042.awsfcaj.com> <br> <https://000064.awsfcaj.com> |
+| 4 | - Sửa sơ đồ và nội dung blog 3 theo phản biện: VPC endpoint cho ECR, Secrets Manager và Logs, Scheduled Scaling cho dev/test, Fargate Spot, BYOM, cost allocation tag, lifecycle S3 <br> - Làm việc nhóm: chạy project FCAJ | 18/11/2026 | 18/11/2026 | <https://docs.aws.amazon.com/AmazonECR/latest/userguide/vpc-endpoints.html> <br> <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html> <br> <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html> <br> <https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html> <br> <https://cloudjourney.awsfcaj.com/> <br> <https://www.facebook.com/groups/awsstudygroupfcj/posts/2341814056583553> |
+| 5 | - Làm việc nhóm: tiếp tục project FCAJ | 19/11/2026 | 19/11/2026 | |
+| 6 | - Viết integration test cho đăng nhập JWT, chạy qua JwtBearer thật và các policy theo group | 20/11/2026 | 20/11/2026 | |
+| CN | - Làm việc nhóm cho RoomLedger <br> - Hạ tầng: RDS Multi-AZ cho prod, thêm hàng đợi SQS xử lý ảnh, thêm stage prod theo kiến trúc v8.5.2 <br> - Cắt bớt tính năng: so sánh ảnh bằng AI lúc trả phòng và prompt điều khoản hợp đồng không dùng tới | 22/11/2026 | 22/11/2026 | |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Blog 2 đã đăng, blog 3 đã sửa xong một vòng theo phản biện.
+* Phần quyết toán chạy được ở backend: tính tiền hoàn, chuyển phòng về trạng thái trống và tạo biên bản PDF.
+* RoomLedger đã có CloudWatch dashboard và alarm riêng, tất cả gửi về một SNS topic. Đây chính là bài lab tuần 8 nhưng làm trên dự án thật.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Khó khăn & cách giải quyết:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Ngày 22/11 nhóm thu gọn phạm vi, phần so sánh ảnh bằng AI mình làm ở tuần 9 bị bỏ. Trả phòng giờ được duyệt thủ công.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Bắt tay vào làm giao diện web cho RoomLedger.

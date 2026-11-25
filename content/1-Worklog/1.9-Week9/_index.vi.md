@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm luồng trả phòng và chỉ số đồng hồ lúc nhận phòng cho dự án nhóm RoomLedger.
+* Viết blog 1 và chọn chủ đề cho blog 2, blog 3.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | - Ôn lại CloudWatch <br> - Làm việc nhóm: tiếp tục dự án | 09/11/2026 | 09/11/2026 | |
+| 3 | - Viết blog 1 <br> - RoomLedger trả phòng (MD-06): <br>&emsp; + Mở biên bản trả phòng và gửi đi so sánh <br>&emsp; + Dùng perceptual hash để bỏ qua các cặp ảnh gần như không đổi <br>&emsp; + So sánh ảnh bằng Bedrock, Sonnet lỗi thì chuyển sang Haiku <br>&emsp; + Chủ nhà duyệt các phát hiện, người thuê đồng ý hoặc khiếu nại | 10/11/2026 | 10/11/2026 | <https://aws.amazon.com/blogs/architecture/modernization-pathways-for-a-legacy-net-framework-monolithic-application-on-aws/> <br> <https://www.facebook.com/groups/awsstudygroupfcj/posts/2333637697401189> |
+| 4 | - Lên ý tưởng cho blog 2 <br> - RoomLedger nhận phòng (MD-04): phải nhập chỉ số điện, nước ban đầu thì mới xác nhận được biên bản <br> - Sửa các trường hợp reviewer chỉ ra ở PR #15 | 11/11/2026 | 11/11/2026 | <https://builder.aws.com/> |
+| 5 | - Bắt đầu viết blog 3 về tối ưu chi phí trên AWS <br> - Làm việc nhóm: áp dụng những gì đọc được trong tài liệu blog vào dự án | 12/11/2026 | 12/11/2026 | <https://builder.aws.com/> <br> <https://cloudjourney.awsfcaj.com/> |
+| CN | - Từ chối ảnh gửi tới sau khi biên bản đã khoá <br> - Chuyển phần so sánh trả phòng thành state machine Step Functions, có DLQ và alarm <br> - Merge PR #15 và #18 | 15/11/2026 | 15/11/2026 | |
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Đã viết xong blog 1 và đăng lên group FCJ.
+* Luồng trả phòng chạy được trọn vẹn ở backend, từ lúc mở biên bản tới lúc người thuê phản hồi.
+* Lần đầu mình dùng Bedrock, và bài lab Step Functions ở tuần 6 giúp ích nhiều khi dựng state machine so sánh ảnh.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Khó khăn & cách giải quyết:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Review ở PR #15 chỉ ra những trường hợp mình chưa nghĩ tới, ví dụ hợp đồng thuê đã quyết toán hoặc chỉ số đồng hồ đã được xác nhận. Mình sửa và bổ sung test ngay trong ngày.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành blog 2 và viết tiếp blog 3.
+* Làm phần quyết toán trả phòng cho RoomLedger.

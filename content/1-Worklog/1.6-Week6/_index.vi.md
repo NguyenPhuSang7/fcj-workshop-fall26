@@ -1,58 +1,35 @@
 ---
 title: "Worklog Tuần 6"
 date: 2024-01-01
-weight: 1
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu cách các dịch vụ trên AWS giao tiếp với nhau: SQS, SNS, EventBridge và Step Functions.
+* Dựng một luồng xử lý hướng sự kiện nhỏ.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | - Gửi nhận message với SQS và SNS | 19/10/2026 | 19/10/2026 | <https://000077.awsfcaj.com/> |
+| 3 | - Định tuyến sự kiện với EventBridge | 20/10/2026 | 20/10/2026 | <https://000054.awsfcaj.com/> |
+| 4 | - Xây workflow với Step Functions | 21/10/2026 | 21/10/2026 | <https://000047.awsfcaj.com/> |
+| 5 | - Lab: kiến trúc hướng sự kiện <br>&emsp; + Tạo SNS topic và SQS queue, cho queue subscribe vào topic <br>&emsp; + Thêm EventBridge rule để định tuyến sự kiện <br>&emsp; + Viết Lambda nhận message từ SQS để xử lý <br>&emsp; + Gửi một sự kiện thử và theo dõi nó đi hết luồng <br>&emsp; + Dọn tài nguyên | 22/10/2026 | 22/10/2026 | <https://000054.awsfcaj.com/> <br> <https://000083.awsfcaj.com/> |
+| 6 | - Ôn lại phần tích hợp ứng dụng <br> - Tiếp tục làm ý tưởng dự án | 23/10/2026 | 23/10/2026 | |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Giải thích được khi nào dùng SQS (hàng đợi) và khi nào dùng SNS (publish/subscribe).
+* Biết EventBridge định tuyến sự kiện ra sao và Step Functions nối các bước thành workflow thế nào.
+* Dựng được một luồng hướng sự kiện đơn giản chạy từ đầu đến cuối.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Khó khăn & cách giải quyết:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Nhóm đã có ý tưởng nhưng khó ở chỗ hiện thực: chi phí chạy dự án còn cao hơn chi phí mà vấn đề đang gây ra cho người dùng.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Kế hoạch tuần tới:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Học container và orchestration theo roadmap AWS Free Tier: Docker, ECS và ECR.

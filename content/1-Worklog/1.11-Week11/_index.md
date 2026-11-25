@@ -1,57 +1,35 @@
 ---
 title: "Week 11 Worklog"
 date: 2024-01-01
-weight: 2
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Agree on a smaller product scope with the team.
+* Build the RoomLedger web screens so they work on both phone and desktop.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2 | - Review and merge PR #36 (RenderPdf and EvidenceSeal Lambdas set to 512 MB) <br> - Narrow the scope with the team to meters and invoices: only the landlord uploads meter photos, the tenant can view them, move-out and settlement are out | 23/11/2026 | 23/11/2026 | |
+| 3 | - Decide on a web app only, no native app; tenants can use it on desktop too <br> - Build the design system, the responsive layouts, the meter review screen and the tenant invoice <br> - Build the rest of the landlord, tenant and public screens on sample data | 24/11/2026 | 24/11/2026 | |
+| 4 | - Fix what came up in testing: landlord navigation on phone, the undo toast, the retake photo button, approving a meter reading twice, photo zoom and the dispute link for tenants, plus copy and accessibility fixes | 25/11/2026 | 25/11/2026 | |
+| 5 | - (Planned) Open a pull request for the web screens and work through the review | 26/11/2026 | | |
+| 6 | - (Planned) Keep fixing the screens based on team feedback | 27/11/2026 | | |
 
 ### Week 11 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* The team now has a clear and smaller scope: meter readings and invoices.
+* Every RoomLedger screen for landlords, tenants and public pages runs on sample data, on both phone and desktop.
 
-* Successfully created and configured an AWS Free Tier account.
+### Difficulties & Solutions:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* The new scope left out the move-out and settlement work I did in weeks 9 and 10. I moved over to the frontend, where the team needed more hands.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### Plan for next week:
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Connect the screens to the real API.
+* Get ready for the final demo.

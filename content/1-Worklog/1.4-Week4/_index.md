@@ -1,57 +1,36 @@
 ---
 title: "Week 4 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand identity and security on AWS: IAM users, groups, roles, policies and MFA.
+* Set up an account where several people work with different permissions.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2 | - IAM users, groups and roles | 05/10/2026 | 05/10/2026 | <https://000002.awsfcaj.com/> |
+| 3 | - Policies and permissions <br>&emsp; + How a JSON policy is structured, least privilege | 06/10/2026 | 06/10/2026 | <https://000044.awsfcaj.com/> |
+| 4 | - Set up MFA for IAM users | 07/10/2026 | 07/10/2026 | <https://000002.awsfcaj.com/> |
+| 5 | - Lab: multi-user account with separate permissions <br>&emsp; + Create one group per role (Admin, Developer, ReadOnly) <br>&emsp; + Attach a matching policy to each group <br>&emsp; + Create users, put them in groups and turn on MFA <br>&emsp; + Log in as each user and check what they can and can't do <br>&emsp; + Remove the users, groups and policies at the end | 08/10/2026 | 08/10/2026 | <https://000028.awsfcaj.com/> |
+| 6 | - Go back over networking and IAM | 09/10/2026 | 09/10/2026 | |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* I can manage users, groups and roles in IAM.
+* I can write a policy and keep it to the least privilege the user needs.
+* I know how to turn on MFA to protect an account.
+* I set up an account where each group of users only gets its own permissions.
 
-* Successfully created and configured an AWS Free Tier account.
+### Difficulties & Solutions:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* I still had no idea for the FCAJ project. My plan was to look at the problems small teams and startups run into and start from there.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### Plan for next week:
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Move on to more AWS services and review what I've learned, still following the AWS Free Tier roadmap.

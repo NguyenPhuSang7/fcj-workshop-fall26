@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 4"
 date: 2024-01-01
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu về định danh và bảo mật trên AWS: IAM user, group, role, policy và MFA.
+* Dựng một tài khoản có nhiều người dùng, mỗi người một quyền khác nhau.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | - IAM user, group và role | 05/10/2026 | 05/10/2026 | <https://000002.awsfcaj.com/> |
+| 3 | - Policy và quyền truy cập <br>&emsp; + Cấu trúc policy dạng JSON, nguyên tắc quyền tối thiểu | 06/10/2026 | 06/10/2026 | <https://000044.awsfcaj.com/> |
+| 4 | - Cài MFA cho IAM user | 07/10/2026 | 07/10/2026 | <https://000002.awsfcaj.com/> |
+| 5 | - Lab: tài khoản nhiều người dùng, phân quyền riêng <br>&emsp; + Tạo group theo vai trò (Admin, Developer, ReadOnly) <br>&emsp; + Gắn policy phù hợp cho từng group <br>&emsp; + Tạo user, thêm vào group và bật MFA <br>&emsp; + Đăng nhập bằng từng user để xem được làm gì, không được làm gì <br>&emsp; + Xoá user, group và policy sau khi xong | 08/10/2026 | 08/10/2026 | <https://000028.awsfcaj.com/> |
+| 6 | - Ôn lại phần mạng và IAM | 09/10/2026 | 09/10/2026 | |
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Quản lý được user, group và role bằng IAM.
+* Viết được policy và giữ quyền ở mức tối thiểu người dùng cần.
+* Biết bật MFA để bảo vệ tài khoản.
+* Dựng được tài khoản mà mỗi nhóm người dùng chỉ có quyền của nhóm đó.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Khó khăn & cách giải quyết:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Mình vẫn chưa có ý tưởng cho dự án FCAJ. Hướng đi là tìm những vấn đề mà các team nhỏ và startup hay gặp rồi bắt đầu từ đó.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Học thêm các dịch vụ AWS khác và ôn lại kiến thức cũ, vẫn theo roadmap AWS Free Tier.

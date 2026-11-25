@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 2"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm quen với một vài dịch vụ cơ bản của AWS.
+* Đưa một trang web đơn giản lên chạy trên AWS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | - Nhận $100 credit miễn phí <br> - Đọc về VPC | 21/09/2026 | 21/09/2026 | <https://000003.awsfcaj.com/> |
+| 3 | - Tìm hiểu EC2 và tạo instance đầu tiên | 22/09/2026 | 22/09/2026 | <https://000004.awsfcaj.com/> |
+| 4 | - Học S3 và Route 53 | 23/09/2026 | 23/09/2026 | <https://000010.awsfcaj.com/> <br> <https://000057.awsfcaj.com/> |
+| 5 | - Lab: host một trang blog đơn giản trên S3 <br>&emsp; + Tạo bucket, tắt Block Public Access <br>&emsp; + Thêm bucket policy cho phép đọc công khai <br>&emsp; + Bật static website hosting trong Properties <br>&emsp; + Đặt index.html làm trang chủ rồi tải file HTML lên <br>&emsp; + Làm xong thì xoá bucket | 24/09/2026 | 24/09/2026 | <https://000057.awsfcaj.com/> |
+| 7 | - Tham dự sự kiện The Thinking Behind Building The Bot | 26/09/2026 | 26/09/2026 | |
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Đã nắm được kiến thức cơ bản về EC2, Route 53 và S3.
+* Trang web tĩnh chạy được trên S3 trước khi mình dọn đi.
+* Sau sự kiện The Thinking Behind Building The Bot, mình hiểu rõ hơn ngành đang đi theo hướng nào.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Khó khăn & cách giải quyết:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Mỗi dịch vụ mình học riêng lẻ nên chưa thấy được chúng ghép với nhau thế nào.
+* Cách xử lý: chọn những bài lab dùng nhiều dịch vụ cùng lúc, rồi bỏ bớt từng phần để xem kết quả thay đổi ra sao.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Học tiếp các dịch vụ mới theo roadmap AWS Free Tier và ôn lại những gì đã học.

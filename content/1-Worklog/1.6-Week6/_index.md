@@ -1,57 +1,35 @@
 ---
 title: "Week 6 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn how services talk to each other on AWS: SQS, SNS, EventBridge and Step Functions.
+* Build a small event-driven setup.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2 | - Messaging with SQS and SNS | 19/10/2026 | 19/10/2026 | <https://000077.awsfcaj.com/> |
+| 3 | - Routing events with EventBridge | 20/10/2026 | 20/10/2026 | <https://000054.awsfcaj.com/> |
+| 4 | - Building workflows with Step Functions | 21/10/2026 | 21/10/2026 | <https://000047.awsfcaj.com/> |
+| 5 | - Lab: event-driven architecture <br>&emsp; + Create an SNS topic and an SQS queue, then subscribe the queue to the topic <br>&emsp; + Add an EventBridge rule to route the events <br>&emsp; + Write a Lambda function that picks up messages from SQS <br>&emsp; + Send a test event and follow it through the whole flow <br>&emsp; + Clean up the resources | 22/10/2026 | 22/10/2026 | <https://000054.awsfcaj.com/> <br> <https://000083.awsfcaj.com/> |
+| 6 | - Review application integration <br> - Keep working on the project idea | 23/10/2026 | 23/10/2026 | |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* I can explain when to use SQS (a queue) and when to use SNS (publish/subscribe).
+* I know how EventBridge routes events and how Step Functions chains steps into a workflow.
+* I built a simple event-driven flow from end to end.
 
-* Successfully created and configured an AWS Free Tier account.
+### Difficulties & Solutions:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* We finally have an idea, but making it real is the hard part: running the project would cost more than the problem costs people today.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### Plan for next week:
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Containers and orchestration from the AWS Free Tier roadmap: Docker, ECS and ECR.
